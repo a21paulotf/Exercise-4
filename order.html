@@ -8,52 +8,73 @@
     <link rel="shotcut icon" href="./img/favicon.ico">
 </head>
 <body>
-    <img src="./img/burger-svgrepo-com.svg" alt="Burguer" height="100">
-    <hr>
-    <h2>Create a burguer!</h2>
-
-    <label for="protein">What type of protein would you like?</label>
-    <input type="text" name="protein" id="protein" value="protein">
-    <hr>
-
-    <label for="patties">How many patties would you like?</label>
-    <input type="text" name="patties" id="patties">
-    <hr>
-
-    <label for="cooked">How do you want your patty cooked</label>
-    <p>Rare<input type="range" name="cooked" id="cooked">Well-Done</p>
-    <hr>
-
-    <label for="toppings">What toppings would you like?</label><br>
-    <label for="lettuce">Lettuce</label>
-    <input type="checkbox" name="toppings" id="lettuce" value="lettuce">
-    <label for="tomato">Tomato</label>
-    <input type="checkbox" name="toppings" id="tomato" value="tomato">
-    <label for="onion">Onion</label>
-    <input type="checkbox" name="toppings" id="onion" value="onion">
-    <hr>
-
-    <label for="cheese">Would you like to add cheese?</label><br>
-    <input type="radio" name="cheese" id="yes" value="yes">
-    <label for="cheese">Yes</label>
-    <input type="radio" name="cheese" id="no" value="no">
-    <label for="cheese">No</label>
-    <hr>
-
-    <label for="bun">What type of bun would you like?</label>
-    <select name="bun" id="bun">
-        <option value="sesame">Semame</option>
-        <option value="wheat">Wheat</option>
-        <option value="oatmeal">Oatmeal</option>
-    </select>
-    <hr>
-
-    <label for="sauce"></label>
-    <input type="text" name="sauce" id="sauce">
-    <hr>
-
-    <label for=""></label>
-    <input type="text" name="" id="">
-    
+    <form action="submit.php" method="post">
+        <section>
+            <img src="./img/burger-svgrepo-com.svg" alt="Burguer" height="100">
+            <hr>
+            <h2>Create a burguer!</h2>
+        </section>
+        <section>
+            <label for="protein">What type of protein would you like?</label>
+            <input type="text" name="protein" id="protein" value="protein">
+            <hr>
+        </section>
+        <section>
+            <label for="patties">How many patties would you like?</label>
+            <input type="number" max="10" min="0" name="patties" id="patties">
+            <hr>
+        </section>
+        <section>
+            <label for="cooked">How do you want your patty cooked</label>
+            <p>Rare<input type="range" max="5" min="1" name="cooked" id="cooked">Well-Done</p>
+            <hr>
+        </section>
+        <section>
+            <label for="toppings">What toppings would you like?</label><br>
+            <label for="lettuce">Lettuce</label>
+            <input type="checkbox" name="toppings" id="lettuce" value="lettuce">
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" name="toppings" id="tomato" value="tomato">
+            <label for="onion">Onion</label>
+            <input type="checkbox" name="toppings" id="onion" value="onion">
+            <hr>
+        </section>
+        <section>
+            <label for="cheese">Would you like to add cheese?</label><br>
+            <input type="radio" name="cheese" id="yes" value="yes">
+            <label for="cheese">Yes</label>
+            <input type="radio" name="cheese" id="no" value="no">
+            <label for="cheese">No</label>
+            <hr>
+        </section>
+        <section>
+            <label for="bun">What type of bun would you like?</label>
+            <select name="bun" id="bun">
+                <option value="sesame">Semame</option>
+                <option value="potato">Potato</option>
+                <option value="pretzel">Pretzel</option>
+            </select>
+            <hr>
+        </section>
+        <section>
+            <label for="sauce">What type of sauce would you like?</label>
+            <input type="text" list="sauce" name="sauce" class="input">
+            <datalist id="sauce">
+                <option value="Ketchup"></option>
+                <option value="Mayo"></option>
+                <option value="Mustard"></option>
+            </datalist>
+            
+            <hr>
+        </section>
+        <section>
+            <label for="add">Anything else you want to add?</label><br>
+            <textarea name="add" id="add" cols="40" rows="4"></textarea>
+            <hr>
+        </section>
+        <section>
+        <input type="submit" value="Submit">
+        </section>
+    </form>
 </body>
 </html>
